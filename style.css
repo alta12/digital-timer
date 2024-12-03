@@ -49,7 +49,7 @@ body {
     font-size: 18px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 720px) {
     .container {
         margin-top: 150px;
         background-color: rgba(57, 166, 255, 0.7);
