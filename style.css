@@ -4,6 +4,8 @@ body {
     align-content: center;
     height: 100vh;
     background-image: url("image/animesky.jpg");
+    background-position: cover;
+
 }
 .container {
     background-color: rgba(57, 166, 255, 0.7);
@@ -47,10 +49,7 @@ body {
     font-size: 18px;
 }
 
-@media screen and (max-width: 700px) {
-    body {
-        background-position: top right;
-    }
+@media screen and (max-width: 1000px) {
     .container {
         margin-top: 150px;
         background-color: rgba(57, 166, 255, 0.7);
