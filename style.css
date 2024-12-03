@@ -3,8 +3,9 @@ body {
     justify-content: center;
     align-content: center;
     height: 100vh;
-    background-image: url("image/animesky.jpg");
-    background-position: cover;
+    background-image: url("image/backiee-205922-landscape.jpg");
+    /* background-position: cover; */
+    /* background-position: bottom; */
 
 }
 .container {
@@ -48,8 +49,8 @@ body {
     width: 78px;
     font-size: 18px;
 }
-
 @media screen and (max-width: 720px) {
+   
     .container {
         margin-top: 150px;
         background-color: rgba(57, 166, 255, 0.7);
@@ -79,4 +80,4 @@ body {
         width: 160px;
         font-size: 40px;
     }
-}
+} 
