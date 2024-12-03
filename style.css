@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-image: url("image/animesky.jpg");
+}
+.container {
+    background-color: rgba(57, 166, 255, 0.7);
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+}
+.display {
+    font-family: "Orbitron", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 9px 9px 0px 0px;
+    height: 80px;
+    width: 240px;
+    background-color: rgb(222, 222, 250);
+}
+.input-box {
+    display: flex;
+}
+.input-box input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 83.4;
+    padding: 25px;
+    font-size: 18px;
+}
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+.options button {
+    height: 60px;
+    width: 78px;
+    font-size: 18px;
+}
+
+
