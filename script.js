@@ -9,15 +9,21 @@ var inputBox = document.querySelector(".input-box");
 var bgm = document.querySelector(".bgm");
 var hr, min, sec;
 var interval;
-// var thr, tmin, tsec;
+var thr, tmin, tsec;
 
 function getValue() {
     min = minute.value;
-    min = (min == "") ? min = 0 : min;
+    min = (min == "") ? 0 : min;
+    tmin = min;
     hr = hour.value;
-    hr = (hr == "") ? hr = 0 : hr;
+    hr = (hr == "") ? 0 : hr;
+    thr = hr;
     sec = second.value;
-    sec = (sec == "") ? sec = 0 : sec;
+    sec = (sec == "") ? 0 : sec;
+    tsec = sec;
+    if(min >= 60 || sec >= 60) {
+        alert("ENTER VALID TIME!");
+    }
 }
 function runTimer() {
     sec-=1;
@@ -33,18 +39,21 @@ function runTimer() {
     if(min == 0 && sec == 0) {
         clearInterval(interval);
     }
+    
+    display.innerHTML = (hr < 10 ? "0"+hr : hr ) + ":" + (min < 10 ? "0"+min : min) + ":" + (sec < 10 ? "0"+sec : sec);
     if(hr == 0 && min == 0 && sec == 0 ) {
         bgm.play();
+        hr = thr;
+        min = tmin;
+        sec = tsec;
     }
-    display.innerHTML = (hr < 10 ? "0"+hr : hr ) + ":" + (min < 10 ? "0"+min : min) + ":" + (sec < 10 ? "0"+sec : sec);
-
 }
 function stopTimer() {
     clearInterval(interval);
 }
 function count() {
     if(min == undefined) {
-        alert("ENTER VALUE");
+        alert("ENTER VALUE!");
     } else {
         interval = setInterval(runTimer, 1000);
     }
