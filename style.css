@@ -47,4 +47,37 @@ body {
     font-size: 18px;
 }
 
-
+@media screen and (max-width: 700px) {
+    body {
+        background-position: top right;
+    }
+    .container {
+        margin-top: 150px;
+        background-color: rgba(57, 166, 255, 0.7);
+        width: 600px;
+        height: 600px;
+        border-radius: 8px;
+    }
+    .display {
+        font-size: 80px;
+        border: 5px solid rgb(0, 0, 0);
+        border-radius: 9px 9px 0px 0px;
+        height: 200px;
+        width: 595px;
+        background-color: rgb(222, 222, 250);
+    }
+    .input-box input {
+        height: 200px;
+        width: 200px;
+        padding: 25px;
+        font-size: 40px;
+    }
+    .options {
+        height: 200px;
+    }
+    .options button {
+        height: 120px;
+        width: 160px;
+        font-size: 40px;
+    }
+}
