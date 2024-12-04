@@ -13,13 +13,13 @@ var thr, tmin, tsec;
 
 function getValue() {
     min = minute.value;
-    min = (min == "") ? 0 : min;
+    min = (min == "") ? 0 : min-1;
     tmin = min;
     hr = hour.value;
     hr = (hr == "") ? 0 : hr;
     thr = hr;
     sec = second.value;
-    sec = (sec == "") ? 0 : sec;
+    sec = (sec == "") ? 59 : sec;
     tsec = sec;
     if(min >= 60 || sec >= 60) {
         alert("ENTER VALID TIME!");
@@ -33,7 +33,7 @@ function runTimer() {
         min-=1;
     }
     if(hr > 0 && min == 0) {
-        min = 60;
+        min = 59;
         hr-=1;
     }
     if(min == 0 && sec == 0) {
