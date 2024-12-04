@@ -12,16 +12,19 @@ var interval;
 var thr, tmin, tsec;
 
 function getValue() {
+    sec = second.value;
     min = minute.value;
-    min = (min == "") ? 0 : min-1;
-    tmin = min;
     hr = hour.value;
     hr = (hr == "") ? 0 : hr;
-    thr = hr;
-    sec = second.value;
-    sec = (sec == "") ? 59 : sec;
+    min = (min == "") ? 0 : min;
+    min = (sec == "" && min > 0) ? min-1 : min;
+    sec = (sec == "") ? 0 : sec;
+    sec = (min > 0 && sec == 0)  ? 60 : sec;
     tsec = sec;
-    if(min >= 60 || sec >= 60) {
+    tmin = min;
+    thr = hr;
+    
+    if(min >= 60 || sec >= 61) {
         alert("ENTER VALID TIME!");
     }
 }
@@ -29,7 +32,7 @@ function runTimer() {
     sec-=1;
     console.log(sec);
     if(min > 0 && sec == 0) {
-        sec = 60;
+        sec = 59;
         min-=1;
     }
     if(hr > 0 && min == 0) {
@@ -52,6 +55,7 @@ function stopTimer() {
     clearInterval(interval);
 }
 function count() {
+    console.log(hr+":"+min+":"+sec);
     if(min == undefined) {
         alert("ENTER VALUE!");
     } else {
